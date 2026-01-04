@@ -1,5 +1,9 @@
-import { Heart, Shield, Sparkles, Brain, Moon, Target, User } from 'lucide-react';
-import lyndaimg from 'images/lynda-photo.jpg'
+import { Heart, Shield, Sparkles, Brain, Moon, Target } from 'lucide-react';
+
+// 1. IMPORT THE IMAGE HERE
+// Note: The '../' means "go up one folder" to find the images folder. 
+// Adjust the number of '../' depending on where this file is located.
+import lyndaPhoto from '../images/lynda-photo.jpg'; 
 
 export default function AboutSection() {
   const approaches = [
@@ -19,10 +23,6 @@ export default function AboutSection() {
     { icon: Brain, text: "Motivation, objectifs, discipline" },
   ];
 
-  // Placeholder pour le chemin de l'image de Lynda
-  const lyndaPhotoUrl = "images/lynda-photo.jpg"; 
-  // N'oubliez pas de créer ou d'ajuster ce chemin dans votre projet !
-
   return (
     <section id="qui-suis-je" className="py-20 bg-gradient-to-br from-rose-50 to-white">
       <div className="container mx-auto px-6">
@@ -41,19 +41,19 @@ export default function AboutSection() {
               {/* Emplacement de la Photo */}
               <div className="flex-shrink-0 w-full md:w-64 max-w-xs mx-auto md:mx-0">
                 <div className="aspect-square w-full rounded-full overflow-hidden shadow-xl border-4 border-rose-200">
-                  {/* Utilisation de l'URL définie plus haut */}
+                  
+                  {/* 2. USE THE IMPORTED VARIABLE HERE */}
                   <img
-                    src={lyndaPhotoUrl}
+                    src={lyndaPhoto} 
                     alt="Portrait de Lynda, Praticienne en Hypnose et PNL"
                     className="w-full h-full object-cover"
-                    // Gérer l'état de chargement ou l'absence d'image avec un fallback
-                    onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/256/fecaca/fff?text=Lynda" }}
+                    onError={(e) => { 
+                        // Typescript fix for e.target
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null; 
+                        target.src = "https://via.placeholder.com/256/fecaca/fff?text=Lynda" 
+                    }}
                   />
-                  
-                  {/* Option : Fallback si pas de photo (décommenter si vous voulez un simple icône au lieu du placeholder) */}
-                  {/* <div className="w-full h-full flex items-center justify-center bg-rose-100">
-                      <User className="w-1/3 h-1/3 text-rose-400" />
-                  </div> */}
                   
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Suites des approches et bienfaits (inchangés) */}
+          {/* Suites des approches et bienfaits */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-rose-100">
               <h3 className="text-2xl font-light text-gray-800 mb-6 flex items-center gap-2">
