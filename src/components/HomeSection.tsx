@@ -14,7 +14,7 @@ export default function HomeSection() {
 
           <div className="prose prose-lg max-w-none text-gray-600 space-y-6 leading-relaxed">
             <p className="text-center text-xl">
-              Je vous accompagne grâce à l'hypnose ericksonienne, à la PNL, au coaching mental et aux séances bien-être, en ligne ou en plein air, afin de vous aider à retrouver équilibre et confiance.
+              Je vous accompagne grâce à l'hypnose ericksonienne, à la PNL, au coaching mental et aux séances bien-être, afin de vous aider à retrouver équilibre et confiance.
             </p>
 
             <p className="text-center">

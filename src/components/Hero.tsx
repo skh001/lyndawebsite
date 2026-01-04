@@ -62,7 +62,7 @@ export default function Hero() {
           </p>
 
           <p className="text-lg md:text-xl text-gray-500 mb-12">
-            Coach bien-être & mentale | Coaching online & en plein air – Switzerland
+            Coach bien-être & mentale – Switzerland
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
