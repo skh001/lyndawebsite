@@ -1,5 +1,9 @@
-import { Menu, X } from 'lucide-react'; // Removed Sparkles import as it's no longer needed
+import { Menu, X } from 'lucide-react'; 
 import { useState } from 'react';
+
+// 1. IMPORT YOUR LOGO HERE
+// Make sure the filename matches exactly (logo.png vs Logo.png)
+import logoImg from '../images/logo.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,21 +22,14 @@ export default function Header() {
         <div className="flex items-center justify-between">
           
           {/* --- LOGO SECTION START --- */}
-          {/* We removed gap-2 because there is now only one item (the image) */}
           <div className="flex items-center">
-            {/* IMPORTANT: 
-              1. Replace '/logo.png' with the actual filename of your logo in the public folder.
-              2. Adjust 'h-10' (height: 40px) to 'h-8' (smaller) or 'h-12' (larger) if needed.
-              3. 'w-auto' ensures the logo keeps its proportions.
-            */}
             <img 
-              src="/logo.png" 
+              src={logoImg} // 2. USE THE IMPORTED VARIABLE
               alt="Logo Lynda" 
               className="h-10 w-auto object-contain"
             />
           </div>
           {/* --- LOGO SECTION END --- */}
-
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
