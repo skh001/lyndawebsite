@@ -1,23 +1,23 @@
 import { Star, Instagram } from 'lucide-react';
 
 export default function TestimonialsSection() {
-  const placeholderTestimonials = [
+  const realTestimonials = [
     {
       id: 1,
-      name: "Sophie M.",
-      text: "Une expérience transformatrice. Lynda a su créer un espace de confiance où j'ai pu explorer en profondeur mes blocages. Je recommande vivement.",
+      name: "Nour",
+      text: "Depuis que je suis sortie du rdv je me sens mieux dans ma peau, je ne sais pas comment expliquer faut le vivre pour le comprendre. Je conseille vraiment l'hypnose aux personnes qui ont vécu le harcèlement ou d'autres traumatismes.",
       rating: 5,
     },
     {
       id: 2,
-      name: "Marie L.",
-      text: "Approche douce et bienveillante. Les séances m'ont aidée à retrouver confiance en moi et à mieux gérer mon stress quotidien.",
+      name: "Une patiente",
+      text: "Au début j'étais un peu stressée et réticente, mais vous avez su me mettre à l'aise. Je me suis sentie vraiment bien, soulagée et comprise. Après la séance, j'ai eu l'impression de revivre : un sentiment incroyable.",
       rating: 5,
     },
     {
       id: 3,
-      name: "Caroline D.",
-      text: "Professionnalisme et empathie. Chaque séance est adaptée à mes besoins. Je me sens écoutée et accompagnée.",
+      name: "Luna",
+      text: "Je me réjouis de te raconter comment se passent les choses depuis notre rdv, il y a eu beaucoup d'évolution. J'ai enfin réussi à faire certaines choses. Je te remercie infiniment.",
       rating: 5,
     },
   ];
@@ -32,25 +32,25 @@ export default function TestimonialsSection() {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-rose-400 to-amber-400 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600">
-              Découvrez les expériences et témoignages des personnes que j'ai accompagnées.
+              Découvrez les retours et expériences des personnes que j'ai accompagnées.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {placeholderTestimonials.map((testimonial) => (
+            {realTestimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-gradient-to-br from-rose-50 to-white p-8 rounded-2xl shadow-sm border border-rose-100 hover:shadow-md transition-shadow"
+                className="bg-gradient-to-br from-rose-50 to-white p-8 rounded-2xl shadow-sm border border-rose-100 hover:shadow-md transition-shadow flex flex-col"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-700 mb-4 leading-relaxed italic flex-grow">
                   "{testimonial.text}"
                 </p>
-                <p className="text-sm font-medium text-gray-800">
+                <p className="text-sm font-medium text-gray-800 mt-auto">
                   {testimonial.name}
                 </p>
               </div>
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
                 Retrouvez tous mes avis clients sur Google
               </p>
               <a
-                href="https://maps.app.goo.gl/BYDVnp96cCxc6t7p7"
+                href="https://share.google/lxi8b4u2OhFz62qnh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-6 py-3 bg-white text-gray-700 rounded-full hover:shadow-md transition-shadow text-sm font-medium"

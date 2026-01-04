@@ -1,4 +1,4 @@
-import { Clock, Brain, Sparkles, TreePine, ArrowRight, Laptop, Check } from 'lucide-react';
+import { Clock, Brain, Sparkles, Dumbbell, Activity, ArrowRight, Check } from 'lucide-react';
 
 // --- CONFIGURATION ---
 const CALENDLY_URL = "https://calendly.com/lyndakhenchelaoui/hypnose-ericksonienne"; 
@@ -10,7 +10,7 @@ export default function PricingSection() {
       icon: Sparkles,
       title: "Hypnose Ericksonienne",
       duration: "60-90 min",
-      price: "120 CHF",
+      price: "80 CHF",
       features: [
         "Séance personnalisée",
         "Suivi post-séance",
@@ -21,7 +21,7 @@ export default function PricingSection() {
       icon: Brain,
       title: "Coaching mental & PNL",
       duration: "60 min",
-      price: "100 CHF",
+      price: "70 CHF",
       features: [
         "Techniques PNL",
         "Exercices pratiques",
@@ -29,25 +29,25 @@ export default function PricingSection() {
       ]
     },
     {
-      icon: Laptop, // Icône adaptée pour le Online
-      title: "Fitness Online",
-      duration: "45 min",
-      price: "80 CHF",
+      icon: Dumbbell,
+      title: "Séance de Sport",
+      duration: "60 min",
+      price: "70 CHF",
       features: [
-        "Séance en visio",
-        "Programme sur mesure",
-        "Suivi de progression"
+        "Coaching sur mesure",
+        "Renforcement musculaire",
+        "Motivation & énergie"
       ]
     },
     {
-      icon: TreePine,
-      title: "Fitness Outdoor",
+      icon: Activity,
+      title: "Massage Sportif",
       duration: "60 min",
-      price: "90 CHF",
+      price: "80 CHF",
       features: [
-        "En plein air",
-        "Exercices variés",
-        "Motivation & énergie"
+        "Récupération musculaire",
+        "Détente profonde",
+        "Soulagement des tensions"
       ]
     },
   ];

@@ -1,4 +1,5 @@
 import { Heart, Shield, Sparkles, Brain, Moon, Target, User } from 'lucide-react';
+import lyndaimg from 'images/lynda-photo.jpg'
 
 export default function AboutSection() {
   const approaches = [
@@ -19,7 +20,7 @@ export default function AboutSection() {
   ];
 
   // Placeholder pour le chemin de l'image de Lynda
-  const lyndaPhotoUrl = "/images/lynda-photo.jpg"; 
+  const lyndaPhotoUrl = "images/lynda-photo.jpg"; 
   // N'oubliez pas de créer ou d'ajuster ce chemin dans votre projet !
 
   return (
